@@ -8,7 +8,9 @@ const Header = () => {
       <Navbar bg="primary" variant="dark" expand="lg">
         <Container>
           <LinkContainer to="/">
-            <Navbar.Brand>HR-Mailer</Navbar.Brand>
+            <Navbar.Brand>
+              <i class="fas fa-paper-plane"></i>HR-mailer
+            </Navbar.Brand>
           </LinkContainer>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

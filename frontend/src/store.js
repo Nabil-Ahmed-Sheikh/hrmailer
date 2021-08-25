@@ -2,11 +2,18 @@ import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 
-import { employeeListReducer } from "./reducers/employeeReducers";
+import {
+  employeeListReducer,
+  addSingleEmployeeReducer,
+  addMultiEmployeeReducer,
+} from "./reducers/employeeReducers";
 import { emailSendReducer } from "./reducers/emailReducers";
+
 const reducer = combineReducers({
   employeeList: employeeListReducer,
   emailSend: emailSendReducer,
+  addSingleEmployee: addSingleEmployeeReducer,
+  addMultiEmployee: addMultiEmployeeReducer,
 });
 
 const initialState = {};

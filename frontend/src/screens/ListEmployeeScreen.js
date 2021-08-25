@@ -7,7 +7,7 @@ import { Table, Button, Row, Col, InputGroup } from "react-bootstrap";
 import Paginate from "../components/Paginate";
 import EmailModal from "../components/EmailModal";
 
-const ListEmployeeScreen = ({ history, match }) => {
+const ListEmployeeScreen = ({ match }) => {
   const pageNumber = match.params.page || 1;
 
   const [checkedEmailList, setCheckedEmailList] = useState([]);
@@ -77,9 +77,11 @@ const ListEmployeeScreen = ({ history, match }) => {
               </Table>
             </Col>
             <Col lg={2} md={3} className="text-center">
-              <Button style={{ margin: "15% 0" }} onClick={handleShow}>
-                <i class="fas fa-paper-plane"></i> Send Email
-              </Button>
+              {checkedEmailList.length > 0 && (
+                <Button style={{ margin: "25% 0 10% 0" }} onClick={handleShow}>
+                  <i class="fas fa-paper-plane"></i> Send Email
+                </Button>
+              )}
             </Col>
           </Row>
           <Paginate pages={pages} page={page} />

@@ -30,7 +30,7 @@ connection.query(
 
 connection.query(
   `INSERT INTO users( firstName, lastName, email ) 
-  VALUES ('Zehad', 'Hassan', 'zehad@example,com'), 
+  VALUES ('Zehad', 'Hassan', 'zehad@example.com'), 
   ('Jane', 'Doe', 'jane@example.com'), 
   ('Billy', 'Wales', 'billy@example.com'),
   ('Miranda', 'Moose', 'moose@example.com'), 
