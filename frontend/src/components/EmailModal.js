@@ -65,7 +65,7 @@ const EmailModal = ({ show, handleClose, emailList }) => {
         <Message variant="danger">{error}</Message>
       ) : (
         <>
-          <Modal.Header closeButton>
+          <Modal.Header>
             <Modal.Title>Compose</Modal.Title>
           </Modal.Header>
           <Modal.Body>
